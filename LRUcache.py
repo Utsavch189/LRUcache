@@ -18,6 +18,9 @@ class Cache:
 		self.cache.move_to_end(key)
 		if len(self.cache) > self.capacity:
 			self.cache.popitem(last = False) # --> remove first added item as LRU concept.
+			
+	def delete(self,key):
+		self.cache.pop(key)
 
 data1={'utsav':{'msg':'hi'}}
 data2={'supu':{'msg':'hiii'}}
